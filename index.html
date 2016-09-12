@@ -1,0 +1,68 @@
+<head>
+  <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="//use.fontawesome.com/2ee144e705.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>HW Sign In/Sign Out</title>
+</head>
+<body>
+  <div class="jumbotron">
+    <center>
+      <div class="page-header">
+        <h1>Check In/Check Out</h1>
+      </div>
+    </center>
+  </div>
+  <style>
+    .grey {
+      opacity: 0.6;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+  </style>
+  <div class="panel panel-default" id=scan>
+    <div class=panel-heading>
+      Scan
+    </div>
+    <div class="panel-body">
+      <div class="alert alert-info" role="alert">Please scan your ID or enter your barcode or your student ID number</div>
+      <center>
+        <div class="input-group">
+          <input type="text" id="inputBox" class="form-control" placeholder="Barcode Number or Student ID" autofocus onkeydown = "if (event.keyCode == 13) document.getElementById('button').click()" style=width:240px;>
+        </div>
+        <table class=fixed>
+          <tr>
+            <td><button onclick="inputNumber(1);" class="btn btn-default btn-block" type="submit">1</button></td>
+            <td><button onclick="inputNumber(2);" class="btn btn-default btn-block" type="submit">2</button></td>
+            <td><button onclick="inputNumber(3);" class="btn btn-default btn-block" type="submit">3</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="inputNumber(4);" class="btn btn-default btn-block" type="submit">4</button></td>
+            <td><button onclick="inputNumber(5);" class="btn btn-default btn-block" type="submit">5</button></td>
+            <td><button onclick="inputNumber(6);" class="btn btn-default btn-block" type="submit">6</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="inputNumber(7);" class="btn btn-default btn-block" type="submit">7</button></td>
+            <td><button onclick="inputNumber(8);" class="btn btn-default btn-block" type="submit">8</button></td>
+            <td><button onclick="inputNumber(9);" class="btn btn-default btn-block" type="submit">9</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="backspace();" class="btn btn-default btn-block" type="submit"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></td>
+            <td><button onclick="inputNumber(0);" class="btn btn-default btn-block" type="submit">0</button></td>
+            <td><button onclick="submit();" class="btn btn-default btn-block" type="submit">Submit</button></td>
+          </tr>
+        </table>
+      </div>
+    </center>
+  </div>
+  <script src="googlesheets.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+</body>

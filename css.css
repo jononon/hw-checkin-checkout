@@ -1,0 +1,3 @@
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; width:80px;}
+.btn-block{height:50px!important;}
