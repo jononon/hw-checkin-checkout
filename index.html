@@ -33,7 +33,7 @@
       Scan
     </div>
     <div class="panel-body">
-      <div class="alert alert-info" role="alert">Please scan your ID or enter your barcode or your student ID number</div>
+      <div class="alert alert-info" role="alert">Please <strong>scan your ID</strong> or <strong>enter your barcode</strong> or <strong>your student ID number</strong>.</div>
       <center>
         <div class="input-group">
           <input type="text" id="inputBox" class="form-control" placeholder="Barcode Number or Student ID" autofocus onkeydown = "if (event.keyCode == 13) document.getElementById('button').click()" style=width:240px;>
@@ -57,12 +57,57 @@
           <tr>
             <td><button onclick="backspace();" class="btn btn-default btn-block" type="submit"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></td>
             <td><button onclick="inputNumber(0);" class="btn btn-default btn-block" type="submit">0</button></td>
-            <td><button onclick="submit();" class="btn btn-default btn-block" type="submit">Submit</button></td>
+            <td><button onclick="submit();" class="btn btn-success btn-block" type="submit">Submit</button></td>
           </tr>
         </table>
       </div>
     </center>
   </div>
+  <div class="panel panel-default" id=result>
+    <div class=panel-heading>
+      Check-in/Check-Out
+    </div>
+    <div class="panel-body">
+      <div class="alert alert-info" role="alert"><strong>Successfully Found Records</strong></div>
+      <center>
+        <img src=https://puu.sh/r8i47/b1eb1cf7d5.png alt="student_image" class="img-thumbnail">
+        <h4><b>Jonathan Damico, 11th Grade</b></h4>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">Check In</button>
+          <button type="button" class="btn btn-default">Check Out</button>
+        </div>
+      </center>
+    </div>
+  </div>
+  <div class="panel panel-default" id=success>
+    <div class=panel-heading>
+      Check-in/Check-Out
+    </div>
+    <div class="panel-body">
+      <div class="alert alert-success" role="alert"><strong>Successfully Checked In</strong></div>
+      <center>
+        <img src=https://puu.sh/r8i47/b1eb1cf7d5.png alt="student_image" class="img-thumbnail">
+        <h4><b>Jonathan Damico, 11th Grade</b></h4>
+        <h4>Time: 9:15:32 AM</h4>
+        <button type="button" class="btn btn-primary">Next User <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+      </center>
+    </div>
+  </div>
+  <div class="panel panel-default" id=failure>
+    <div class=panel-heading>
+      Check-in/Check-Out
+    </div>
+    <div class="panel-body">
+      <div class="alert alert-danger" role="alert"><strong>Unable to Check In</strong></div>
+      <center>
+        <img src=https://puu.sh/r8i47/b1eb1cf7d5.png alt="student_image" class="img-thumbnail">
+        <h4><b>Jonathan Damico, 11th Grade</b></h4>
+        <h4><b>Please see Mr. Preciado</b></h4>
+        <button type="button" class="btn btn-primary">Next User <span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+      </center>
+    </div>
+  </div>
+
   <script src="googlesheets.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </body>
